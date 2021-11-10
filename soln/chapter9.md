@@ -209,3 +209,29 @@ FROM actor_agg
     ON actor_agg.num_roles
         BETWEEN actor_grps.min_roles AND actor_grps.max_roles;
 ```
+
+Output
+
+```bash
++----------+-----------+----------------+
+| actor_id | num_roles | level          |
++----------+-----------+----------------+
+|        1 |        19 | Newcomer       |
+|        2 |        25 | Prolific Actor |
+|        3 |        22 | Prolific Actor |
+|        4 |        22 | Prolific Actor |
+|        5 |        29 | Prolific Actor |
+...
+|      190 |        27 | Prolific Actor |
+|      191 |        30 | Hollywood Star |
+|      192 |        29 | Prolific Actor |
+|      193 |        23 | Prolific Actor |
+|      194 |        22 | Prolific Actor |
+|      195 |        27 | Prolific Actor |
+|      196 |        30 | Hollywood Star |
+|      197 |        33 | Hollywood Star |
+|      198 |        40 | Hollywood Star |
+|      199 |        15 | Newcomer       |
+|      200 |        20 | Prolific Actor |
++----------+-----------+----------------+
+```
